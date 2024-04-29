@@ -1,0 +1,40 @@
+/* src/components/FeedbackForm/EmojiSlider.css */
+
+.emoji-slider {
+    margin-bottom: 20px;
+  }
+  
+  .emoji-slider label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .emoji-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+  }
+  
+  .emoji-container button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s, background-color 0.2s;
+  }
+  
+  .emoji-container button:hover {
+    transform: scale(1.1);
+  }
+  
+  .emoji-container button.selected {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  
+  .emoji-container button:not(.selected) {
+    opacity: 0.7;
+  }
+  

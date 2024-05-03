@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import EmojiSlider from './EmojiSlider';
 import './FeedbackForm.css';
-import 'fontsource-roboto';
+import FeedbackCard from '../Card/FeedbackCard';
+
 
 const FeedbackForm = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ const FeedbackForm = () => {
     rating: '',
     comments: ''
   });
+  const [feedbackData, setFeedbackData] = useState([]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,6 +28,8 @@ const FeedbackForm = () => {
     e.preventDefault();
     // Handle form submission logic (e.g., API call)
     console.log(formData);
+    // Add the new feedback data to the feedbackData state
+    setFeedbackData([...feedbackData, formData]);
     // Reset form after submission
     setFormData({
       name: '',
@@ -35,7 +39,6 @@ const FeedbackForm = () => {
       comments: ''
     });
   };
-
   return (
     <div className="feedback-form-container">
       <h2 className="form-title">Feedback Form</h2>
@@ -72,6 +75,19 @@ const FeedbackForm = () => {
 
         <button type="submit" className="submit-btn">Submit</button>
       </form>
+      {/* Display feedback cards */}
+      <div className="feedback-cards-container">
+        {feedbackData.map((feedback, index) => (
+          <FeedbackCard
+            key={index}
+            name={feedback.name}
+            email={feedback.email}
+            feedbackType={feedback.feedbackType}
+            rating={feedback.rating}
+            comments={feedback.comments}
+          />
+        ))}
+      </div>
     </div>
   );
 };

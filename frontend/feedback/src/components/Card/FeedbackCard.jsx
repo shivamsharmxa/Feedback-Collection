@@ -3,36 +3,38 @@
 import React from 'react';
 import './FeedbackCard.css';
 
-
-
-
-
-
-
-
-const FeedbackCard = ({ name, email, feedbackType, rating }) => {
-  // Function to generate emoji rating
-  const generateRatingEmoji = () => {
-    const ratingEmoji = Array.from({ length: rating }, (_, index) => '⭐️');
-    return ratingEmoji.join('');
-  };
-
-  return (
-    <div className="feedback-card">
-      <div className="card-content">
-        <h3 className="card-title">{name}</h3>
-        <p className="card-email">{email}</p>
-        <p className="card-feedback">{feedbackType}</p>
-        <div className="rating">
-          <span>Rating:</span>
-          <span>{generateRatingEmoji()}</span>
+const FeedbackCard = ({ name, email, feedbackType, rating, comments }) => {
+    // Function to generate star icons based on rating
+    const renderStars = () => {
+      const stars = [];
+      for (let i = 0; i < rating; i++) {
+        stars.push(<span key={i} className="star">&#9733;</span>); // Unicode character for star
+      }
+      return stars;
+    };
+  
+    return (
+      <div className="feedback-card">
+        <div className="card-content">
+          <div className="card-column">
+            <div className="card-item">
+              <strong>Name:</strong> {name}
+            </div>
+            <div className="card-item">
+              <strong>Email:</strong> {email}
+            </div>
+            <div className="card-item">
+              <strong>Feedback Type:</strong> {feedbackType}
+            </div>
+            <div className="card-item">
+              <strong>Rating:</strong> {renderStars()}
+            </div>
+            <div className="card-item">
+              <strong>Comments:</strong> {comments}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-
-
-
-export default FeedbackCard;
+    );
+  };
+  export default FeedbackCard;

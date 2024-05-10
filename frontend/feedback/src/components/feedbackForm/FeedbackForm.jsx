@@ -39,9 +39,12 @@ const FeedbackForm = () => {
       comments: ''
     });
   };
+  
   return (
     <div className="feedback-form-container">
-      <h2 className="form-title">Feedback Form</h2>
+      <h2 className="form-title">Feedback Form
+      <hr/>
+      </h2>
       <form onSubmit={handleSubmit} className="feedback-form">
         <div className="form-group">
           <label htmlFor="name" className="form-label">Name:</label>

@@ -1,0 +1,72 @@
+/*  for popup profile */
+* , :before, :after{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+} 
+.modal{
+    background: #22228f;
+    padding: 50px;
+    align-items: center;
+    width: 600px;
+    height: 500px;
+    box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+    border-radius: 8px;
+}
+.card{
+    margin: auto;
+    background: #fff;
+    height: 400px;
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(109, 113, 119, 0.751);
+}
+
+.user_image img{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 2px solid #22228f;
+    object-fit:cover;
+}
+.close_btn{
+    background-color: #22228f;
+    color: white;
+    font-weight: 400;
+    font-size: 17px;
+    width: 90px;
+    box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+}
+.close_btn:hover{
+    background-color: #2e2e91;
+    transform: scale(1.08);
+}
+.user_details{
+    margin-left: 40px;
+    background-color: aliceblue;
+    padding: 50px 10px;
+    height: 300px;
+    width: 340px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+}
+.details{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+.details label{
+    font-weight: bold;
+    font-size: 16px;
+    color: #3a3838;
+    margin-bottom: 20px;
+}
+.details h3{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 17px;
+    color: #363535;
+}

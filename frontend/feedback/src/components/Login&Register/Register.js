@@ -1,8 +1,8 @@
 // Registration page 
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Register.css'
+import { Link, useNavigate } from 'react-router-dom';
+import './Register.css';
 
 function Register() {
   // show or hide button function
@@ -36,12 +36,12 @@ function Register() {
   const [password, setPassword] = useState('');         
   const [confirmPassword, setConfirmPassword] = useState('');
   const [checked, setChecked] = useState(false);
+  const navigate = useNavigate();
   
 
   const handleSubmit = e => {
     e.preventDefault();
     console.log(e.target.username.value);
-
     if (!e.target.username.value) {
       alert("Please enter a username");
     }else if (!e.target.email.value) {
@@ -62,7 +62,9 @@ function Register() {
      e.target.password.value === "123456" &&
      e.target.confirmPassword.value === e.target.password.value 
     ){
-      alert("Successfully logged in")
+      alert("Successfully registered");
+      // Redirect to dashboard page
+      navigate('/Dashboard');
     }else {
       console.log('Form submitted:', { username, email, password, confirmPassword });
     }
@@ -92,7 +94,7 @@ function Register() {
           <input type="checkbox" name="agree" value={checked} className="checkbox" checked={checked} onChange={(event) => setChecked(!checked)} />
           <label className='termsLine'> I accept all <Link to="/MainForm" className='link'>  terms & conditions</Link></label>
         
-          <button className="submit_btn" type="submit"><Link to="/Dashboard" className='link1'>Register Now</Link></button>
+          <button className="submit_btn" type="submit">Register Now</button>
         
         </form>
         <div className='login_link'>Already have an account? <Link to="/" className='link'> Login now</Link></div>

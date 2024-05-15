@@ -100,7 +100,7 @@ label > img{
     cursor: pointer;
 }
   
-button > .link{
+button{
     border-radius: 5px;
     border: none;
     color: #fff;

@@ -8,6 +8,7 @@ import MainForm from './components/feedbackForm/MainFeedback';
 import Dashboard from './components/Dashboard/Dashboard';
 import ForgotPassword from './components/Login&Register/forgotPassword';
 
+
 function RoutesComp(){
 
   return (
@@ -17,7 +18,7 @@ function RoutesComp(){
             <Route path="/" element={<Login />}></Route>
             <Route path="/Register" element={<Register/>}></Route>
             <Route path="/MainForm" element={<MainForm/>}></Route>
-            <Route path="/Dashboard" element={<Dashboard/>}></Route> 
+            <Route path="/Dashboard" element={<Dashboard/>}></Route>
             <Route path="/ForgotPassword" element={<ForgotPassword/>}></Route> 
           </Routes>
         </Router>

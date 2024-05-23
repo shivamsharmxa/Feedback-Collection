@@ -18,19 +18,19 @@ const FeedbackCard = ({ name, email, feedbackType, rating, comments }) => {
         <div className="card-content">
           <div className="card-column">
             <div className="card-item">
-              <strong>Name:</strong> {name}
+              <strong  className="name">Name:</strong> {name}
             </div>
             <div className="card-item">
-              <strong>Email:</strong> {email}
+              <strong className="email">Email:</strong> {email}
             </div>
             <div className="card-item">
-              <strong>Feedback Type:</strong> {feedbackType}
+              <strong  className="feedback-type">Feedback Type:</strong> {feedbackType}
             </div>
             <div className="card-item">
-              <strong>Rating:</strong> {renderStars()}
+              <strong  className="star">Rating:</strong> {renderStars()}
             </div>
             <div className="card-item">
-              <strong>Comments:</strong> {comments}
+              <strong  className="comments">Comments:</strong> {comments}
             </div>
           </div>
         </div>

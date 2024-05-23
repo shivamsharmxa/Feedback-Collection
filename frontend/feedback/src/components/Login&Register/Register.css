@@ -1,0 +1,104 @@
+/* Register page css */
+
+* , :before, :after{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+} 
+.container1{
+    align-items: center;
+    width: 500px;
+    margin: 7% auto;
+    padding: 50px 30px;
+    background: #fff;
+}
+h1{
+    color: #3a3838;
+    margin-right: 250px;
+}
+h1 > hr{
+    background-color: #22228f;
+    height: 3px;
+    width: 40px;
+}
+.register-form{
+    padding: 30px 0;
+}
+.input-grp{
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: #464444;
+    font-size: 18px;
+    height: 40px;
+    width: 95%;
+    outline: 0;
+    padding: 0 17px;
+    margin: 10px 0;
+    transition: all 0.3s;
+    box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+}
+.input-grp:focus {
+    background: #fff;
+    border: 2px solid black;
+}
+.input-grp::placeholder {
+    color: #504e4e;
+    font-size: 19px;
+}
+p{
+    margin: -9% 0 20px 83%;
+    font-family: 'Roboto', sans-serif;
+    color: #414040;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.checkbox{
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+.termsLine{
+    font-family: 'Roboto', sans-serif;
+    color: #414040;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 210px;
+}
+button {
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    max-width: 420px;
+    outline: 0;
+    padding: 10px 0;
+    transition: transform background 0.3s;
+    width: 95%;
+}
+.submit_btn{
+    background:#22228f;
+    color: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+}
+.submit_btn:hover{
+    background: #2f2fc4;
+    transform: scale(1.03)
+}
+.login_link{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #292727; 
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}

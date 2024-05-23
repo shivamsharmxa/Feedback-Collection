@@ -7,10 +7,11 @@
     padding: 15px;
     margin-bottom: 30px;
     transition: all 0.3s ease;
+    box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
   }
   
   .feedback-card:hover {
-    background-color: #d8f8f4; /* Change background color on hover */
+    background-color: #cef8f3; /* Change background color on hover */
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
@@ -23,6 +24,9 @@
   
   .card-item {
     margin-bottom: 8px;
+  }
+  .name{
+    color: rgb(103, 51, 124);
   }
   
   .star {
